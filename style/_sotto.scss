@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.sotto{
+    display: flex;
+
+
+    &__sinistra{
+        width: 30%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(/image/image-about-dark.jpg);
+        
+    }
+
+    &__centro{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--testo{
+            width: 80%;
+
+            h2{
+                font-size: 1.3rem;
+                letter-spacing: .4rem;
+            }
+            p{
+                line-height: 1.3rem;
+                font-size: 1.1rem;
+                color: $color-primary-griggio;
+            }
+        }
+    }
+
+    &__destra{
+        width: 30%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(/image/image-about-light.jpg);
+
+    }
+}

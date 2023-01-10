@@ -1,0 +1,186 @@
+
+@use 'variables' as *;
+
+.sopra{
+    display: flex;
+
+    .primaImagine{
+        background-image: url(/image/desktop-image-hero-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background;
+        transition-duration: .5s;
+    }
+
+    .secondaImagine{
+        background-image: url(/image/desktop-image-hero-2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background;
+        transition-duration: .5s;
+    }
+
+    .terzaImagine{
+        background-image: url(/image/desktop-image-hero-3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background;
+        transition-duration: .5s;
+    }
+
+    &__sinistra{
+        width: 60%;
+
+
+        &--nav{
+            display: flex;
+            margin-top: 1rem;
+            margin-left: 2.5rem;
+
+            ul{
+                padding: 0;
+                font-size: 1.1rem;
+                display: flex;
+                align-items: center;
+                list-style: none;
+                color: white;
+
+                li{
+                    user-select: none;
+                    margin-left: 2rem;
+
+                    a{
+                        text-decoration: none;
+                        list-style: none;
+                        color: white;
+                        position: relative;
+                        transition: color .3s ease-in-out;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            width: 100%;
+                            height: 2px;
+                            background-color: white;
+                            transform: scaleX(0);
+                            transition: transform .3s ease-in-out;
+                          }
+                          
+                          &:hover::before {
+                            transform: scaleX(.5);
+                          } 
+                    }
+                }
+            }
+
+            
+            .room{
+                font-size: 2rem;
+                margin-right: 2rem;
+            }
+
+        }
+    }
+
+    &__destra{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        &--testo{
+            margin: 18%;
+            margin-top: 13%;
+            margin-bottom: 0;
+            height: 80%;
+
+            .primoTesto{
+                visibility: visible;
+                position: relative;
+
+            }
+
+            .secondoTesto{
+                position: absolute;
+                visibility: hidden;
+
+            }
+
+            .terzoTesto{
+                position: absolute;
+                visibility: hidden;
+
+            }
+
+
+            h2{
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p{
+                color: $color-primary-griggio;
+                line-height: 1.3rem;
+                font-size: 1.1rem;
+            }
+
+            &__shop{
+                display: flex;
+                align-items: center;
+
+                p{
+                    color: $color-primary-nero;
+                    letter-spacing: .75rem;
+                    transition-property: color;
+                    transition-duration: .2s;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: $color-primary-griggio;
+                        user-select: none;
+                    }
+                }
+
+                img{
+                    margin-bottom: .3rem;
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+
+        &--scroll{
+            background-color: aliceblue;
+            width: 13.5rem;
+            height: 20%;
+            margin: 0;
+            display: flex;
+
+            button{
+                background-color: $color-primary-nero;
+                border: none;
+                outline: none;
+                transition-property: background-color;
+                transition-duration: .25s;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $color-primary-griggio;
+                }
+            }
+
+            .button__sinistro{
+                width: 50%;
+            }
+
+            .button__destro{
+                width: 50%;
+            }
+            
+
+        }
+    }
+}
+

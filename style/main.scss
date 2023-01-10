@@ -1,0 +1,317 @@
+
+@use 'sotto';
+@use 'sopra';
+@use 'variables' as *;
+
+*{
+    scroll-behavior: smooth;
+    user-select: none;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sopra{
+    min-height: 70vh;
+
+}
+
+.sotto{
+    min-height: 30vh;
+}
+
+.sinistra__button--scroll{
+    visibility: hidden;
+    position: absolute;
+}
+
+.sopra__sinistra--navMobile{
+    visibility: hidden;
+    position: absolute;
+}
+
+.menu__responsive{
+    position: absolute;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1450px){
+    .sopra{
+        &__destra{
+            &--testo{
+                margin: 14%;
+                margin-top: 10%;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .sopra{
+        &__destra{
+            &--testo{
+                h2{
+                    font-size: 2.5rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .sotto{
+        &__centro{
+            &--testo{
+
+                h2{
+                    font-size: 1.05rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 900px){
+    .sopra{
+        flex-direction: column;
+
+        &__sinistra{
+            width: 100%;
+            height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+
+        .sinistra__button--scroll{
+            visibility: visible;
+            position: relative;
+            display: flex;
+            align-self: flex-end;
+            background-color: aliceblue;
+            width: 13.5rem;
+            height: 15%;
+            margin: 0;
+
+            button{
+                background-color: $color-primary-nero;
+                border: none;
+                outline: none;
+                transition-property: background-color;
+                transition-duration: .25s;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $color-primary-griggio;
+                }
+            }
+
+            .button__sinistra--scroll{
+                width: 50%;
+            }
+
+            .button__destro--scroll{
+                width: 50%;
+            }
+            
+        }
+            
+        
+        &__destra{
+            width: 100%;
+            height: 50vh;
+
+            &--testo {
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+
+        .sopra__destra--scroll{
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+
+    .sotto{
+        flex-direction: column;
+
+        &__sinistra{
+            width: 100%;
+            height: 50vh;
+        }
+
+        &__centro{
+            width: 100%;
+            height: 40vh;
+
+            &--testo{
+                h2{
+                    font-size: 1.3rem;
+                }
+
+                p{
+                    font-size: 1.1rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+
+        &__destra{
+            width: 100%;
+            height: 50vh;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+
+    
+    .menu__responsive--sotto{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        opacity: 0%;
+        top: -1000px;
+    }
+
+    .menu__responsive{
+        top: -1000px;
+        visibility: visible;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &--sopra{
+            background-color: white;
+            width: 100%;
+            height: 15vh;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button{
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        &--img{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 1rem;
+            }
+        }
+        &--lista{
+            width: 70%;
+            ul{
+                padding: 0;
+                display: flex;
+                list-style: none;   
+                li{
+                    a{
+                        font-weight: 700;
+                        margin-left: 1rem;
+                        text-decoration: none;
+                        color: $color-primary-nero;
+                    }
+                }
+            }
+        }
+    }
+
+    .sopra__sinistra--navMobile{
+        visibility: visible;
+        position: relative;
+        width: 68.5%;
+        display: flex;
+        justify-content: space-between;
+
+        .logo__hamburger{
+            button{
+                margin-left: 2rem;
+                margin-top: 2rem;
+                padding: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                img{
+                    width: 2rem;
+                }
+            }
+        }
+    }
+
+    .room__desktop{
+
+        p{
+            color: white;
+            font-size: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+    .sopra__sinistra--nav{
+        top: -100px;
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .sopra{
+
+        &__destra{
+            min-height: 40rem;
+        }
+    }
+
+    .sotto{
+        min-height: 100vh;
+
+        &__sinistra{
+            height: 30vh;
+        }
+
+        &__centro{
+            margin: 2rem 0 2rem 0;
+            min-height: 20vh;
+            padding-top: 3.2rem;
+            padding-bottom: 3.2rem;
+        }
+        
+        &__destra{
+            height: 40vh;
+        }
+    }
+}

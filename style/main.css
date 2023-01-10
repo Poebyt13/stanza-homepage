@@ -1,0 +1,429 @@
+.sotto {
+  display: flex;
+}
+.sotto__sinistra {
+  width: 30%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/image/image-about-dark.jpg);
+}
+.sotto__centro {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sotto__centro--testo {
+  width: 80%;
+}
+.sotto__centro--testo h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.4rem;
+}
+.sotto__centro--testo p {
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  color: hsl(0deg, 0%, 63%);
+}
+.sotto__destra {
+  width: 30%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/image/image-about-light.jpg);
+}
+
+.sopra {
+  display: flex;
+}
+.sopra .primaImagine {
+  background-image: url(/image/desktop-image-hero-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background;
+  transition-duration: 0.5s;
+}
+.sopra .secondaImagine {
+  background-image: url(/image/desktop-image-hero-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background;
+  transition-duration: 0.5s;
+}
+.sopra .terzaImagine {
+  background-image: url(/image/desktop-image-hero-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background;
+  transition-duration: 0.5s;
+}
+.sopra__sinistra {
+  width: 60%;
+}
+.sopra__sinistra--nav {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+}
+.sopra__sinistra--nav ul {
+  padding: 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+.sopra__sinistra--nav ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 2rem;
+}
+.sopra__sinistra--nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.sopra__sinistra--nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.sopra__sinistra--nav ul li a:hover::before {
+  transform: scaleX(0.5);
+}
+.sopra__sinistra--nav .room {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.sopra__destra {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.sopra__destra--testo {
+  margin: 18%;
+  margin-top: 13%;
+  margin-bottom: 0;
+  height: 80%;
+}
+.sopra__destra--testo .primoTesto {
+  visibility: visible;
+  position: relative;
+}
+.sopra__destra--testo .secondoTesto {
+  position: absolute;
+  visibility: hidden;
+}
+.sopra__destra--testo .terzoTesto {
+  position: absolute;
+  visibility: hidden;
+}
+.sopra__destra--testo h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.sopra__destra--testo p {
+  color: hsl(0deg, 0%, 63%);
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+}
+.sopra__destra--testo__shop {
+  display: flex;
+  align-items: center;
+}
+.sopra__destra--testo__shop p {
+  color: hsl(0deg, 0%, 0%);
+  letter-spacing: 0.75rem;
+  transition-property: color;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.sopra__destra--testo__shop p:hover {
+  color: hsl(0deg, 0%, 63%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.sopra__destra--testo__shop img {
+  margin-bottom: 0.3rem;
+  margin-left: 1.5rem;
+}
+.sopra__destra--scroll {
+  background-color: aliceblue;
+  width: 13.5rem;
+  height: 20%;
+  margin: 0;
+  display: flex;
+}
+.sopra__destra--scroll button {
+  background-color: hsl(0deg, 0%, 0%);
+  border: none;
+  outline: none;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+.sopra__destra--scroll button:hover {
+  background-color: hsl(0deg, 0%, 63%);
+}
+.sopra__destra--scroll .button__sinistro {
+  width: 50%;
+}
+.sopra__destra--scroll .button__destro {
+  width: 50%;
+}
+
+* {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sopra {
+  min-height: 70vh;
+}
+
+.sotto {
+  min-height: 30vh;
+}
+
+.sinistra__button--scroll {
+  visibility: hidden;
+  position: absolute;
+}
+
+.sopra__sinistra--navMobile {
+  visibility: hidden;
+  position: absolute;
+}
+
+.menu__responsive {
+  position: absolute;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1450px) {
+  .sopra__destra--testo {
+    margin: 14%;
+    margin-top: 10%;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .sopra__destra--testo h2 {
+    font-size: 2.5rem;
+  }
+  .sopra__destra--testo p {
+    font-size: 1rem;
+  }
+  .sotto__centro--testo h2 {
+    font-size: 1.05rem;
+  }
+  .sotto__centro--testo p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .sopra {
+    flex-direction: column;
+  }
+  .sopra__sinistra {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sopra .sinistra__button--scroll {
+    visibility: visible;
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    background-color: aliceblue;
+    width: 13.5rem;
+    height: 15%;
+    margin: 0;
+  }
+  .sopra .sinistra__button--scroll button {
+    background-color: hsl(0deg, 0%, 0%);
+    border: none;
+    outline: none;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    cursor: pointer;
+  }
+  .sopra .sinistra__button--scroll button:hover {
+    background-color: hsl(0deg, 0%, 63%);
+  }
+  .sopra .sinistra__button--scroll .button__sinistra--scroll {
+    width: 50%;
+  }
+  .sopra .sinistra__button--scroll .button__destro--scroll {
+    width: 50%;
+  }
+  .sopra__destra {
+    width: 100%;
+    height: 50vh;
+  }
+  .sopra__destra--testo p {
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+  }
+  .sopra .sopra__destra--scroll {
+    visibility: hidden;
+    position: absolute;
+  }
+  .sotto {
+    flex-direction: column;
+  }
+  .sotto__sinistra {
+    width: 100%;
+    height: 50vh;
+  }
+  .sotto__centro {
+    width: 100%;
+    height: 40vh;
+  }
+  .sotto__centro--testo h2 {
+    font-size: 1.3rem;
+  }
+  .sotto__centro--testo p {
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+  }
+  .sotto__destra {
+    width: 100%;
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .menu__responsive--sotto {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0%;
+    top: -1000px;
+  }
+  .menu__responsive {
+    top: -1000px;
+    visibility: visible;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu__responsive--sopra {
+    background-color: white;
+    width: 100%;
+    height: 15vh;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu__responsive button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .menu__responsive--img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu__responsive--img img {
+    width: 1rem;
+  }
+  .menu__responsive--lista {
+    width: 70%;
+  }
+  .menu__responsive--lista ul {
+    padding: 0;
+    display: flex;
+    list-style: none;
+  }
+  .menu__responsive--lista ul li a {
+    font-weight: 700;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: hsl(0deg, 0%, 0%);
+  }
+  .sopra__sinistra--navMobile {
+    visibility: visible;
+    position: relative;
+    width: 68.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sopra__sinistra--navMobile .logo__hamburger button {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .sopra__sinistra--navMobile .logo__hamburger button img {
+    width: 2rem;
+  }
+  .room__desktop p {
+    color: white;
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  .sopra__sinistra--nav {
+    top: -100px;
+    position: absolute;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sopra__destra {
+    min-height: 40rem;
+  }
+  .sotto {
+    min-height: 100vh;
+  }
+  .sotto__sinistra {
+    height: 30vh;
+  }
+  .sotto__centro {
+    margin: 2rem 0 2rem 0;
+    min-height: 20vh;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+  .sotto__destra {
+    height: 40vh;
+  }
+}/*# sourceMappingURL=main.css.map */
