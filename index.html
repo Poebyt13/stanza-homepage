@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Room homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+
+  <div class="sopra">
+    <div class="sopra__sinistra primaImagine" id="background-grande">
+      <nav class="sopra__sinistra--navMobile">
+        <div class="logo__hamburger">
+          <button id="button-menu">
+            <img src="/image/icon-hamburger.svg" alt="hamburger-menu">
+          </button>
+        </div>
+        <div class="room__desktop">
+          <p class="room__desktop--testo">room</p>
+        </div>
+      </nav>
+
+      <nav class="sopra__sinistra--nav">
+        <ul class="menu" data-animation="center">
+          <li class="room">room</li>
+          <li><a href="#" id="style-2">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sinistra__button--scroll">
+        <button class="button__sinistra--scroll" id="button-sinistro"><img src="/image/icon-angle-left.svg" alt="freccia-sinistro"></button>
+        <button class="button__sinistra--scroll" id="button-destro"><img src="/image/icon-angle-right.svg" alt="freccia-destra"></button>
+      </div>
+
+    </div>
+    <div class="sopra__destra" id="home">
+      <div class="sopra__destra--testo">
+
+        <div class="primerTesto" id="primoTesto">
+          <h2 class="primoTesto--h2">Discover innovative ways to decorate</h2>
+          <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your 
+            own style with our collection and make your property a reflection of you and what you love.</p>
+        </div>
+
+        <div class="secondoTesto" id="secondoTesto">
+          <h2 class="primoTesto--h2">We are available all across the globe</h2>
+          <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+            store locator. Any questions? Don't hesitate to contact us today.</p>
+        </div>
+
+        <div class="terzoTesto" id="terzoTesto">
+          <h2 class="primoTesto--h2">Manufactured with the best materials</h2>
+          <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+            experience in this industry, we understand what customers want for their home and office.</p>
+        </div>
+
+
+
+        <div class="sopra__destra--testo__shop">
+          <p>SHOW NOW</p>
+          <img src="/image/icon-arrow.svg" alt="freccia">
+        </div>
+
+      </div>
+      <div class="sopra__destra--scroll">
+        <button class="button__sinistro" id="button-sinistro-especial"><img src="/image/icon-angle-left.svg" alt="freccia-sinistro"></button>
+        <button class="button__destro" id="button-destro-especial"><img src="/image/icon-angle-right.svg" alt="freccia-destra"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sotto">
+    <div class="sotto__sinistra" id="shop"></div>
+    <div class="sotto__centro" id="about">
+      <div class="sotto__centro--testo">
+        <h2>ABOUT OUR FURNITURE</h2>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+    </div>
+    <div class="sotto__destra" id="contact"></div>
+  </div>
+
+  <div class="menu__responsive" id="menu-responsive">
+    <div class="menu__responsive--sopra">
+      <div class="menu__responsive--img">
+        <button id="close-menu"><img src="/image/icon-close.svg" alt="cerrar-menu"></button>
+      </div>
+      <div class="menu__responsive--lista">
+        <ul>
+          <li><a href="#home" class="links">home</a></li>
+          <li><a href="#shop" class="links">shop</a></li>
+          <li><a href="#about" class="links">about</a></li>
+          <li><a href="#contact" class="links">contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu__responsive--sotto" id="oscura">
+
+    </div>
+  </div>
+
+  <script src="/code/app.js"></script>
+</body>
+</html>
